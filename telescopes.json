@@ -1,0 +1,23 @@
+{
+    "telescopes" : {
+        "32inch" : {
+            "name" : "Schulman 32\" Telescope",
+            "pixscale" : 0.324,
+            "pixscale_units" : "arcsecperpix",
+            "parity" : 1
+        },
+        "24inch" : {
+            "name" : "Phillips 24\" Telescope",
+            "pixscale" : 0.768,
+            "pixscale_units" : "arcsecperpix",
+            "parity" : 1
+        },
+        "default" : {
+            "name" : "Default Telescope",
+            "scale_upper" : 2.0,
+            "scale_lower" : 0.1,
+            "pixscale_units" : "arcsecperpix",
+            "parity" : 2
+        }
+    }
+}
