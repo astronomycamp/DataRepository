@@ -48,7 +48,7 @@ if os.path.isdir(args.path):
         if file.endswith('.fit') or file.endswith('.fits'):
             print('Uploading ' + file)
             try:
-                wcs_header = ast.solve_from_image(args.path + '/' + file, solve_timeout=30, scale_type='ev', scale_est=tele['pixscale'], scale_units=tele['pixscale_units'], scale_err=0.1, parity=tele['parity'], downsample_factor=args.downsample, verbose=False)
+                wcs_header = ast.solve_from_image(args.path + '/' + file, solve_timeout=120, scale_type='ul', scale_lower=tele['scale_lower'], scale_upper=tele['scale_upper'], scale_units=tele['pixscale_units'], parity=tele['parity'], downsample_factor=args.downsample, verbose=False)
             except:
                 print('Failed to solve ' + file + ' for ' + tele['name']+'.')
                 print('Solving with default settings.')
@@ -70,7 +70,7 @@ elif os.path.isfile(args.path):
     if args.path.endswith('.fit') or args.path.endswith('.fits'):
         print('Uploading ' + args.path)
         try:
-            wcs_header = ast.solve_from_image(args.path, solve_timeout=30, scale_type='ev', scale_est=tele['pixscale'], scale_units=tele['pixscale_units'], scale_err=0.1, parity=tele['parity'], downsample_factor=args.downsample, verbose=False)
+            wcs_header = ast.solve_from_image(args.path, solve_timeout=120, scale_type='ul', scale_lower=tele['scale_lower'], scale_upper=tele['scale_upper'], scale_units=tele['pixscale_units'], parity=tele['parity'], downsample_factor=args.downsample, verbose=False)
         except:
             print('Failed to solve ' + args.path + ' for ' + tele['name']+'.')
             print('Solving with default settings.')

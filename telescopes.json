@@ -2,13 +2,15 @@
     "telescopes" : {
         "32inch" : {
             "name" : "Schulman 32\" Telescope",
-            "pixscale" : 0.324,
+            "scale_upper" : 1.0,
+            "scale_lower" : 0.1,
             "pixscale_units" : "arcsecperpix",
             "parity" : 1
         },
         "24inch" : {
             "name" : "Phillips 24\" Telescope",
-            "pixscale" : 0.768,
+            "scale_upper" : 1.0,
+            "scale_lower" : 0.5,
             "pixscale_units" : "arcsecperpix",
             "parity" : 1
         },
